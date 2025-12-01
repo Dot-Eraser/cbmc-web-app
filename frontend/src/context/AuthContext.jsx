@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     try {
-      const response = await fetch('https://cbmc-web-app.onrender.com/api/auth/verify', {
+      const response = await fetch('http://cbmc-web-app.onrender.com/api/auth/verify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token })

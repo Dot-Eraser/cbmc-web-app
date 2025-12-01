@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5050/api',  // ← Changed from 5000 to 5050
+  baseURL: 'https://cbmc-web-app.onrender.com/api',  // ← Changed from 5000 to 5050
   headers: {
     'Content-Type': 'application/json',
   },

@@ -22,13 +22,20 @@ const Navbar = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
+   const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-gradient-to-r from-maroon to-maroon-deep shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center" onClick={closeMenu}>
+          <Link to="/" className="flex items-center space-x-3" onClick={closeMenu}>
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-light via-saffron-light to-saffron flex items-center justify-center shadow-lg">
               <span className="text-2xl">☸</span>
             </div>
@@ -44,21 +51,36 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-maroon transition font-medium">
+            <button
+              onClick={() => scrollToSection("home")}
+              className="text-gold-light/90 hover:text-saffron-light transition"
+            >
               Home
-            </a>
-            <a href="#events" className="text-gray-700 hover:text-maroon transition font-medium">
+            </button>
+            <button
+              onClick={() => scrollToSection("events")}
+              className="text-gold-light/90 hover:text-saffron-light transition"
+            >
               Events
-            </a>
-            <a href="#gallery" className="text-gray-700 hover:text-maroon transition font-medium">
+            </button>
+            <button
+              onClick={() => scrollToSection("gallery")}
+              className="text-gold-light/90 hover:text-saffron-light transition"
+            >
               Gallery
-            </a>
-            <a href="#testimonials" className="text-gray-700 hover:text-maroon transition font-medium">
+            </button>
+            <button
+              onClick={() => scrollToSection("testimonials")}
+              className="text-gold-light/90 hover:text-saffron-light transition"
+            >
               Testimonials
-            </a>
-            <a href="#membership" className="px-6 py-2 bg-gradient-to-r from-saffron to-orange-600 text-white rounded-full font-semibold hover:shadow-lg transition">
-              Join Us
-            </a>
+            </button>
+            <button
+              onClick={() => scrollToSection("membership")}
+              className="text-gold-light/90 hover:text-saffron-light transition"
+            >
+              Membership
+            </button>
             
             {user && (
               <Link

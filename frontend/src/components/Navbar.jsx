@@ -30,8 +30,8 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-saffron to-gold rounded-full flex items-center justify-center">
-                <span className="text-2xl">🙏</span>
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-light via-saffron-light to-saffron flex items-center justify-center shadow-lg">
+                <span className="text-2xl">☸</span>
               </div>
               <div>
                 <h1 className="font-playfair text-2xl font-bold text-maroon">CBMC</h1>

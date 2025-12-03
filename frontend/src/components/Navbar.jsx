@@ -29,14 +29,16 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center" onClick={closeMenu}>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-light via-saffron-light to-saffron flex items-center justify-center shadow-lg">
-                <span className="text-2xl">☸</span>
-              </div>
-              <div>
-                <h1 className="font-playfair text-2xl font-bold text-maroon">CBMC</h1>
-                <p className="text-xs text-gray-600 hidden sm:block">California Buddhist Meditation Center</p>
-              </div>
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-light via-saffron-light to-saffron flex items-center justify-center shadow-lg">
+              <span className="text-2xl">☸</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-playfair text-xl text-gold-light">
+                CBMC
+              </span>
+              <span className="text-xs text-gold-light/80 uppercase tracking-wider">
+                Meditation Center
+              </span>
             </div>
           </Link>
 

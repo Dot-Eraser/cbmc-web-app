@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user } = useAuth();
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -116,13 +117,16 @@ const Navbar = () => {
             >
               Membership
             </button>
-            <Link
-              to="/admin"
-              className="block w-full text-left py-2 text-gold-light/90 hover:text-saffron-light transition"
-              onClick={() => setIsOpen(false)}
-            >
-              Admin
-            </Link>
+            {/* Admin Button - Only show when logged in */}
+            {user && (
+              <Link
+                to="/admin"
+                className="flex items-center gap-2 px-4 py-2 bg-maroon text-white rounded-lg hover:bg-maroon/90 transition font-medium"
+              >
+                <FaUserShield />
+                Admin
+              </Link>
+            )}
           </div>
         </div>
       )}

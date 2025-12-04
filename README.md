@@ -328,6 +328,8 @@ vercel
 cd frontend
 npm run build
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b97dea89-3c05-4404-90e6-913d05455eef/deploy-status)](https://app.netlify.com/projects/cbmcapp/deploys)
+
 # Upload 'dist' folder to Netlify
 # Or connect GitHub repository
 ```
